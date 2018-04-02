@@ -1,0 +1,29 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+template<typename T>
+void calc(T n, char c, T m){
+switch (c) 
+       {
+          case'+':cout<<n<<c<<m<<" = "<<(n+m)<<endl; break;
+          case'-': cout<<n<<c<<m<<" = "<<(n-m)<<endl;break; 
+          case'/': cout<<n<<c<<m<<" = "<<(n/m)<<endl; break; 
+          case'*': cout<<n<<c<<m<<" = "<<(n*m)<<endl;break;
+          default: cout<<"Такой операции нет"<< endl;
+         }
+}
+int main(){
+    setlocale(LC_ALL,"Russian" );
+    char a; 
+    int c,b;
+    cout<<"Введите первое число: \n";
+       cin>>c;
+    cout<<"Введите знак операции: \n";
+       cin>>a;
+    cout<<"Введите второе число:\n";
+       cin>>b;
+    calc(c, a, b);
+ 
+    return 0;
+}
